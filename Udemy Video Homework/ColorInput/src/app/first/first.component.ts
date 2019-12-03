@@ -1,33 +1,21 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { Eves } from './Eves';
+import { Component, OnInit } from '@angular/core';
+import { EvAl } from './ev-al';
 
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
-  styleUrls: ['./first.component.css']
+  styles: []
 })
 export class FirstComponent implements OnInit {
 
-  @Input()
-  title : string
-
-  @Input()
-  type : string
-
-  @Output()
-  btnclk : EventEmitter<Eves> = new EventEmitter()
-
+  eval : EvAl
   constructor() { }
 
   ngOnInit() {
-    this.type = `alert alert-${this.type}`
   }
 
-  clkbtn(){
-    let eves : Eves = {
-      titlei : this.title,
-      typei : this.type
-    }
-    this.btnclk.emit(eves)
+  captureAlert(evAle : EvAl){
+    console.log(`Received Event ${evAle}`)
+    this.eval = evAle
   }
 }

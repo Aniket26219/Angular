@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
+import { AltPkComponent } from './first/alt-pk.component';
+import { AltMnComponent } from './first/alt-mn.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent
+    FirstComponent,
+    AltPkComponent,
+    AltMnComponent
   ],
   imports: [
     BrowserModule,
