@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Eves } from './Eves';
 
 @Component({
   selector: 'app-first',
@@ -13,9 +14,20 @@ export class FirstComponent implements OnInit {
   @Input()
   type : string
 
+  @Output()
+  btnclk : EventEmitter<Eves> = new EventEmitter()
+
   constructor() { }
 
   ngOnInit() {
     this.type = `alert alert-${this.type}`
+  }
+
+  clkbtn(){
+    let eves : Eves = {
+      titlei : this.title,
+      typei : this.type
+    }
+    this.btnclk.emit(eves)
   }
 }
