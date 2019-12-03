@@ -9,7 +9,10 @@ import { Eves } from './first/Eves';
 export class AppComponent {
   title = 'ColorInput';
 
+  ev : Eves
+
   clk(eves : Eves){
+    this.ev = eves
     console.log(eves)
   }
 }
