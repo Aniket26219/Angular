@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-data-comp [rows]="data" (deleterow)="deleterows($event)"></app-data-comp>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" value="fetch data" class="btn btn-primary" (click)="fetchbtn()">
+    </div>
+  </div>
+</div>

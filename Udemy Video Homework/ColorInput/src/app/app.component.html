@@ -1,3 +1,12 @@
 <div class="container">
-  <app-first></app-first>
+    <div class="row">
+        <div class="col-md-12">
+            <app-demo [componentrows]="mainrow" (deleterow)="deleterows($event)" (addrow)="addrows($event)"></app-demo>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="button" value="Fetch" class="btn btn-primary" (click)="fetchbtn()">
+        </div>
+    </div>
 </div>

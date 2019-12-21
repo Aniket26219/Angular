@@ -1,0 +1,48 @@
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Item</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </tr>   
+        <tr>
+            <td><input type="number"></td>
+            <td><input type="text"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+            <td>Add</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{rows[0]?.id}}</td>
+            <td>{{rows[0]?.item}}</td>
+            <td>{{rows[0]?.quantity}}</td>
+            <td>{{rows[0]?.price}}</td>
+            <td (click)="ondelete(rows[0])">Delete</td>
+        </tr>
+        <tr>
+            <td>{{rows[1]?.id}}</td>
+            <td>{{rows[1]?.item}}</td>
+            <td>{{rows[1]?.quantity}}</td>
+            <td>{{rows[1]?.price}}</td>
+            <td (click)="ondelete(rows[1])">Delete</td>
+        </tr>
+        <tr>
+            <td>{{rows[2]?.id}}</td>
+            <td>{{rows[2]?.item}}</td>
+            <td>{{rows[2]?.quantity}}</td>
+            <td>{{rows[2]?.price}}</td>
+            <td (click)="ondelete(rows[2])">Delete</td>
+        </tr>
+        <tr>
+            <td>{{rows[3]?.id}}</td>
+            <td>{{rows[3]?.item}}</td>
+            <td>{{rows[3]?.quantity}}</td>
+            <td>{{rows[3]?.price}}</td>
+            <td (click)="ondelete(rows[3])">Delete</td>
+        </tr>
+    </tbody>
+</table>

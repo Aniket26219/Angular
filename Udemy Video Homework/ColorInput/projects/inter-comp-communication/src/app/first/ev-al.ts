@@ -1,3 +1,3 @@
 export interface EvAl {
-    al : string
+  al: string;
 }
